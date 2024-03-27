@@ -1,4 +1,5 @@
 # GAME-POWER-TESTER
+Демо: https://guileless-brigadeiros-f93dcf.netlify.app/
 
 ## Технологии
 - TypeScript
