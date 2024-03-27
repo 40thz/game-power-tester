@@ -1,35 +1,17 @@
 import styles from './HitZone.module.scss';
-import buttonImg from '@/assets/images/button.png';
-import buttonActiveImg from '@/assets/images/button_active.png';
 import { Hammer } from '../Hammer';
-import { useEffect, useState } from 'react';
 import { useGame } from '@/hooks/useGame';
+import cn from 'classnames';
 
 export const HitZone = () => {
   const {
-    triggers: { isStarted, isStopped },
+    triggers: { isHitting, isFinished },
   } = useGame();
 
-  const [buttonImage, setButtonImage] = useState(buttonImg);
-
-  useEffect(() => {
-    const updateButtonImage = () => {
-      if (isStarted || isStopped) {
-        setButtonImage(buttonImg);
-      } else {
-        setButtonImage(buttonActiveImg);
-      }
-    };
-
-    const timeoutId = setTimeout(updateButtonImage, 150);
-
-    return () => clearTimeout(timeoutId);
-  }, [isStarted, isStopped]);
+  const classes = cn(styles['hitzone'], { [styles.active]: isHitting || isFinished });
 
   return (
-    <section className={styles.hitzone}>
-      <img src={buttonImage} alt="Кнопка" />
-
+    <section className={classes}>
       <Hammer />
     </section>
   );
