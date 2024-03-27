@@ -3,12 +3,13 @@ import styles from './Prize.module.scss';
 import prizeImg from '@/assets/images/prize.png';
 import prizeGlowImg from '@/assets/images/layer_glow.png';
 import { Prize as PrizeType } from '@/store/slices/game';
+import { memo } from 'react';
 
 type PrizeProps = {
   prize: PrizeType | null;
 };
 
-export const Prize = ({ prize }: PrizeProps) => {
+export const Prize = memo(({ prize }: PrizeProps) => {
   const classesPrize = cn([styles.prize], { [styles['active']]: prize });
   const classesPrizeGlow = cn([styles.prize_glow], { [styles['active']]: prize });
 
@@ -26,4 +27,4 @@ export const Prize = ({ prize }: PrizeProps) => {
       </div>
     </div>
   );
-};
+});
