@@ -1,0 +1,52 @@
+@import '@/styles/vars.scss';
+
+.prize {
+  position: relative;
+  border-radius: $radius;
+  width: 73px;
+  height: 47px;
+  background: linear-gradient(180deg, #b676cb 0%, #080b3a 100%);
+  margin-bottom: 6px;
+
+  &_inner,
+  &_glow,
+  &_glow_image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+  }
+
+  &_glow {
+    transition: transform 1.5s;
+    width: 124px;
+    transform: translate(-50%, -50%) scale(0) rotate(-45deg);
+
+    &.active {
+      transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    }
+  }
+
+  &_glow_image {
+    width: 46px;
+    z-index: 1001;
+  }
+
+  &::before {
+    position: absolute;
+    content: '';
+    inset: 0;
+    background: linear-gradient(180deg, #ff9494 0%, #ff0101 100%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 1s linear;
+    border-radius: $radius;
+  }
+
+  &.active {
+    &::before {
+      opacity: 1;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+.hammer {
+  position: absolute;
+  top: -40px;
+  right: -68px;
+  width: 85px;
+  transform-origin: 22% 78%;
+  transform: rotate(-40deg);
+  transition: all 1s;
+}
+
+.hammer_start {
+  top: -80px;
+  transform: rotate(0deg);
+  transition: all 1s;
+}
+
+.hammer_stop {
+  top: -40px;
+  transform: rotate(-40deg);
+}
+
+.hammer_hit {
+  top: -80px;
+  transform: rotate(-90deg);
+  transition: all 0.2s;
+}

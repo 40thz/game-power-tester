@@ -1,0 +1,19 @@
+.app {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 360px;
+  height: 640px;
+  font-weight: 700;
+  background: radial-gradient(58.05% 58.05% at 50% 58.05%, #eb2678 0%, #8e1bcb 45.83%, #0b0f71 100%);
+  padding: 0 12px 37px 24px;
+  z-index: 2000;
+}
+
+.center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

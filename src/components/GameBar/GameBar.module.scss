@@ -1,0 +1,21 @@
+@import '@/styles/vars.scss';
+
+.gamebar {
+  position: relative;
+  max-width: 170px;
+  width: 100%;
+
+  &_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    position: absolute;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    div:nth-child(2) {
+      border-radius: $radius $radius 0 0;
+    }
+  }
+}

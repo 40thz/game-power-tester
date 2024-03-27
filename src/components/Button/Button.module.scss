@@ -1,0 +1,23 @@
+@import '@/styles/vars.scss';
+
+.button {
+  cursor: pointer;
+  background: $pink;
+  border: 1px solid $light;
+  border-radius: 2px;
+  padding: 12px 32px;
+  color: $light;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 100%;
+  font-weight: 700;
+  box-shadow: $shadow;
+  transition: all 0.5s;
+  width: 100%;
+
+  &.pending {
+    background: #ffdf35;
+    color: #bb20a2;
+    border: 1px solid #bb20a2;
+  }
+}

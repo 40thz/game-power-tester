@@ -1,0 +1,28 @@
+@import '@/styles/vars.scss';
+
+.box {
+  position: relative;
+  transition: background 0.5s;
+  width: 74px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    background: $light;
+    opacity: 0.3;
+  }
+
+  &::before {
+    right: 2px;
+    width: calc(100% - 4px);
+    height: 3px;
+  }
+
+  &::after {
+    right: 2px;
+    width: 3px;
+    height: calc(100% - 4px);
+  }
+}

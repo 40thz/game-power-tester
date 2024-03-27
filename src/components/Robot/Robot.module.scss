@@ -1,0 +1,40 @@
+@import '@/styles/vars.scss';
+
+.robot {
+  position: relative;
+  background: $dark-blue;
+  border-radius: 4px;
+  border: 1px solid $light;
+  width: 70px;
+  height: 70px;
+  box-shadow: $shadow;
+
+  &_anim {
+    animation: robot_anim 3s infinite linear;
+  }
+
+  img {
+    position: absolute;
+    top: -13px;
+    height: 120%;
+    width: 100%;
+  }
+}
+
+@keyframes robot_anim {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(-5deg);
+  }
+
+  80% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(0deg);
+  }
+}

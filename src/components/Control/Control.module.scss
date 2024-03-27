@@ -1,0 +1,32 @@
+@import '@/styles/vars.scss';
+
+.control {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  transition: opacity 1s;
+
+  &_title {
+    text-align: center;
+    font-size: 14px;
+    color: $light;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+    span {
+      color: $red;
+    }
+  }
+
+  &_inner {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    height: 40px;
+  }
+
+  &.active {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
